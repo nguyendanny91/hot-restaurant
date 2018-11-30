@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hot Restaurant</title>
+
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Style to fix the issue of text extending past card length -->
+  <style>
+    .card-body a {
+      word-break: break-all;
+    }
+
+    .articleHeadline {
+      line-height: 1.5;
+    }
+
+    p {
+        text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: black ; color: white;">
+      <h1 class="text-center">
+        <span class="glyphicon glyphicon-fire"></span>
+        Hot Restaurant
+      </h1>
+      <p>Book your seat today!</p>
+      <a href="/reservations">
+        <button type="button" class="btn btn-danger">
+          <span class="glyphicon glyphicon-credit-card"></span>
+              Make Reservation
+        </button>
+        </a>
+        <a href="/tables">
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-home"></span>     
+            </button>
+        </a>
+    </div>
+
+    <!-- Row for Displaying Reservered Tables -->
+    <div class="row">
+        <div class="col-sm-12">
+          <br>
+          <!-- First card is for handling the search parameters -->
+          <div class="card">
+            <div class="card-header" style="background-color: black ; color: white;">
+              <strong><i class="fa fa-list-alt"></i>Current Reservations</strong>
+            </div>
+            <div class="card-body">
+    
+              <!-- Create an HTML Form to handle the inputs-->
+              <form role="form">
+    
+                <!-- The text box for capturing the search term-->
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-term">
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Row for Displaying Reservered Tables -->
+    <div class="row">
+        <div class="col-sm-12">
+          <br>
+          <!-- First card is for handling the search parameters -->
+          <div class="card">
+            <div class="card-header" style="background-color: black ; color: white;">
+              <strong><i class="fa fa-list-alt"></i>Waiting List</strong>
+            </div>
+            <div class="card-body">
+    
+              <!-- Create an HTML Form to handle the inputs-->
+              <form role="form">
+    
+                <!-- The text box for capturing the search term-->
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-term">
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <br>
+        <p> 
+            Control Panel
+            <br>
+            <a href="/api/clear">Clear Table</a>
+            | 
+            <a href="/api/tables">API Table Link</a>
+            | 
+            <a href="/api/waitlist">API Wait List</a>
+        </p>
+    </div>
+</footer>
+</div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="NYTCode.js"></script>
+
+</body>
+
+</html>
