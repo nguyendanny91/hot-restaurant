@@ -90,6 +90,28 @@ app.get("/api/waitlist", function(req, res) {
     return res.json(waitlistCust);
     
   }); 
+
+app.post("/api/tables", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  var newcustomer = req.body;
+  console.log(newcustomer);
+  if (reservedCust.length==5){
+    waitlistCust.push(newcustomer);
+    console.log("New waitlist request added.")
+  } else {
+    reservedCust.push(newcustomer);
+    console.log("New reservation made.")
+  }
+  //we're not gonna send back anything, so we are not using res
+});
+
+app.post("/api/clear", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  reservedCust.length=0;
+  waitlistCust.length=0;
+  console.log("All tables are empty");
+  //we're not gonna send back anything, so we are not using res
+});
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
